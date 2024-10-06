@@ -56,7 +56,7 @@
 We cannot make an instance of an interface as well like abstract class. So we can define a dog object in following ways:
 
 ```java
-Dog d1 = new Dog();				// an instance of Dog class
+Dog d1 = new Dog();			// an instance of Dog class
 Animal d2 = new Dog();			// an instance of Animal class
 Speakable d3 = new Dog();		// an instance of Speakable interface
 ```

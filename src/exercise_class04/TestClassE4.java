@@ -1,6 +1,6 @@
 package exercise_class04;
 
-public class TestClass {
+public class TestClassE4 {
 	
 	public static void main(String args []) {
 		Admin admin = new Admin();

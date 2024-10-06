@@ -1,6 +1,6 @@
 package oop_class02;
 
-public class TestClass {
+public class TestClass2 {
 	public static void main(String args[]) {
 		Animal animal = new Animal();
 		animal.weight = 10.5f;

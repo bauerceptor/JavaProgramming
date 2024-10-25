@@ -21,7 +21,7 @@ public class Cat extends Animal {
 //	Animal animal;
 //	
 //	public Cat(Animal animal) {
-//		this.animal = animal'
+//		this.animal = animal;
 //	}
 //	
 //	public void speak() {

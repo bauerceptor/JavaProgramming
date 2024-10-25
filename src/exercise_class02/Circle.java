@@ -3,7 +3,7 @@ package exercise_class02;
 public class Circle extends Shape {
 	double radius;
 	
-	public Circle(float radius) {
+	public Circle(double radius) {
 		this.radius = radius;
 	}
 	

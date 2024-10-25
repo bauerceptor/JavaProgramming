@@ -12,7 +12,7 @@ public class TestClass4 {
 //		};
 //		
 //		
-//		System.out.println( fi.printSomething(" today is Friday"));
+//		System.out.println( fi.printSomething("today is Friday"));
 	
 		
 //		----------------------------------------
@@ -36,7 +36,7 @@ public class TestClass4 {
 		
 //		----------------------------------------
 		
-		StringFormatter toUpper = (str) -> str.toUpperCase();
+		StringFormatter toUpper = str -> str.toUpperCase();
 		String output = toUpper.operate("SaMplE stRing");
 		System.out.println(output);
 		

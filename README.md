@@ -98,7 +98,7 @@ Child object = new Parent();    //! INVALID -> error
 We cannot make an instance of an interface as well like abstract class. So we can define a dog object in following ways:
 
 ```java
-Dog d1 = new Dog();				// an instance of Dog with reference of Dog class
+Dog d1 = new Dog();				  // an instance of Dog with reference of Dog class
 Animal d2 = new Dog();			// an instance of Dog with reference of parent Animal class
 Speakable d3 = new Dog();		// an instance of Dog with reference of parent Speakable interface
 ```
@@ -126,8 +126,8 @@ In this way, we can use interfaces to juggle between different types and enforce
 
 public class People implements Greedy, Miser {
 	public static void main(String args[]) {
-		super.Greedy.money();    // uses the money() method of Greedy interface
-		super.Miser.money();    // uses the money() method of Miser interface
+		super.Greedy.money();     // uses the money() method of Greedy interface
+		super.Miser.money();      // uses the money() method of Miser interface
 	}
 }
 ```
@@ -157,13 +157,13 @@ Speakable s = new Speakable() {
 
 - Lambda expressions are similar to methods, but they do not need a name and they can be implemented right in the body of a method.
 
-		(parameter1, parameter2) -> expression
+    (parameter1, parameter2) -> expression
 
 - Expressions are limited. They have to immediately return a value, and they cannot contain variables, assignments or statements such as if or for.
 
 - In order to do more complex operations, a code block can be used with curly braces. If the lambda expression needs to return a value, **then the code block should have a return statement**.
 
-		(parameter1, parameter2) -> { code block }
+	  (parameter1, parameter2) -> { code block }
 
 ### Functional Interface
 
@@ -384,6 +384,8 @@ If a method does not handle exceptions, the type of exceptions that may occur wi
 
 - Same rule applies to return type of method.
 
+- ***There are some errors in the files/classes in the `error_handling_class05` package.***
+
 
 ---
 
@@ -406,11 +408,21 @@ If a method does not handle exceptions, the type of exceptions that may occur wi
 
 ### Stream API
 
+- Streams API work only on Collections.
+
 - Stream API has a `forEach` method that can take ``Consumer`` type Functional Interface. This simply means that ``forEach`` method can take another method as reference and calls it during each iteration. It should be noted that `forEach` will simply take a method, and this method should not be called inside `forEach`. For example, if we wish to pass SysOut then it will be passed as follows:  `System.out::println`
 
 - `filter` method in Stream API takes a `Predicate` type Functional Interface as argument. This simply means that it will take as argument, a method, that returns `true` or `false`. If the result of that method call is `true`, then `filter` will filter that element (meaning removes it).
 
 - `filter` is used in combination with `collect` method of Stream API. Firstly, `filter` will complete its running (it will complete all its iterations), and filter the array. Then `collect` will return a new Collection (e.g. a list) with filtered content without modifying the original list. The **new list will contain** those entries which returned `true` in the `filter`'s reference method (argument).
+
+- `map` takes in a functional interface. `map` takes in **Function** class type arguments which are actually built upon Java's Functional Interfaces. So instead, we can directly declare lambda expressions inside `map`.
+
+- `sorted` can be used to sort. While sorting custom classes, `Comparator` is used inside `sorted`. Sorted items can be reverse-sorted as well by calling the `reversed()` method after `comparing()`.
+
+- We can compare multiple times by first using the `comparing` method of `Comparator` and then using `thenComparing` method immediately after that.
+
+- `reduce` is used when we wish to perform some aggregation on a list. `reduce`also saves and stores the result of previous iterations.
 
 
 ---

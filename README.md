@@ -7,6 +7,9 @@
  5. [Class 05 - Exception Handling & Throwing Exceptions](#exception-handling)
  6. Class 06 - String Class & Object class' `toString` and `equls` Method Overriding
  7. [Class 07 - Collections & `stream` API](#collections)
+ 8. Class 08 - Revision of Streams API
+ 9. [Class 09 - Java I/O & NIO](#java-io-and-nio)
+ 10. Class 10 - 
 
 
 ---
@@ -46,7 +49,60 @@ Child object = new Parent();    //! INVALID -> error
 
 - Since Lazy Binding occurs at runtime (binding methods to their reference), this is the reason due to which polymorphism also occurs at runtime.
 
-- All methods follow Lazy Binding (runtime binding). But all attributes/instance variables are bound to data-types (compile-time binding). This is called **compile-time binding** or **static binding**.
+- All methods follow Lazy Binding (runtime binding or dynamic binding). But all attributes/instance variables are bound to data-types (compile-time binding). This is called **compile-time binding** or **static binding**.
+
+- Dynamic binding is achieved through method **over-riding** and static binding is achieved by means of method **overloading**.
+
+- If the method call is decided at runtime; it is dynamic polymorphism. For example:
+
+```java
+public static void eat (Veg vegetable) {
+    System.out.println("I am vegetarian");
+}
+public static void eat(Meat meat) {
+    System.out.println("I am non-vegetarian");
+}
+
+
+public static void main(String args[]) {
+    Veg v = new Meat();
+    callEat(v);
+}
+```
+
+It prints `"I am vegetarian"` . This is decided by compiler on runtime so it also called as method over-riding (dynamic binding).
+
+- Likewise, if the method call is decided by compiler during compile time then it is called static polymorphism. For example:
+
+```java
+public int add (int a , int b) {
+    return a+b;
+}
+
+public int add(int a, int b, int c) {
+     return a+b+c;
+}
+
+public static void main (String args[]) {
+   add(1,2);
+   add(1,2,3);
+}
+```
+
+Here the method is chosen depending on the parameter passed even when the name and return type of the method is the same. This is done at compile time and is static polymorphism. But it is also called as method over-loading.
+
+
+> [!NOTE] Caution!!!
+> 
+> [_Dynamic binding_](https://en.wikipedia.org/wiki/Late_binding) is choosing which implementation of a method will be called at runtime, but this doesn't happen in Java. Rather you have [_dynamic dispatch_](https://en.wikipedia.org/wiki/Dynamic_dispatch) which is the ability to choose the correct polymorphic implementation of a method at compile time (which usually translates to choosing the **most specialized version of the method/function**).
+> 
+> But I wouldn't say that dynamic dispatch is polymorphism, I'd say that to support polymorphism you need a mechanism to choose the correct implementation of a method and this is dynamic dispatch.
+> 
+> Inheritance is a kind of polymorphism called [_subtyping_](https://en.wikipedia.org/wiki/Subtyping) (or _subtype polymorphism_) so, contrary to what you say, inheritance is always a form of polymorphism, but other kinds of polymorphism exist, think about:
+> 
+> - [_ad hoc polymorphism_](https://en.wikipedia.org/wiki/Ad_hoc_polymorphism) (implemented through overloading) where the same function has different meanings when applied to different arguments
+> - [_parametric polymorphism_](https://en.wikipedia.org/wiki/Parametric_polymorphism) (implemented with Generics in Java) where you have types with type variables so that a single type can express infinite number of types by binding the variable to a specific type (or a class of types), think about `List<Integer>`
+
 
 ### Abstraction
 
@@ -62,9 +118,10 @@ Child object = new Parent();    //! INVALID -> error
 
 - In Java, every class by default inherits from the **Object** class.
 
-- `Object` class has two important methods: 
+- `Object` class has three important methods: 
 	- `public boolean equals(Object obj)`
 	- `public String toString(Object obj)`
+	- `public int hashCode()`
 
 - These methods need to be over-ridden in all custom classes because they are extremely useful methods and cannot be used as is without overriding them first in our custom class.
 
@@ -98,9 +155,9 @@ Child object = new Parent();    //! INVALID -> error
 We cannot make an instance of an interface as well like abstract class. So we can define a dog object in following ways:
 
 ```java
-Dog d1 = new Dog();				  // an instance of Dog with reference of Dog class
-Animal d2 = new Dog();			// an instance of Dog with reference of parent Animal class
-Speakable d3 = new Dog();		// an instance of Dog with reference of parent Speakable interface
+Dog d1 = new Dog(); // an instance of Dog with reference of Dog class
+Animal d2 = new Dog(); // an instance of Dog with reference of parent Animal class
+Speakable d3 = new Dog(); // an instance of Dog with reference of parent Speakable interface
 ```
 
 In this way, we can use interfaces to juggle between different types and enforce type-safety as well.
@@ -126,8 +183,8 @@ In this way, we can use interfaces to juggle between different types and enforce
 
 public class People implements Greedy, Miser {
 	public static void main(String args[]) {
-		super.Greedy.money();     // uses the money() method of Greedy interface
-		super.Miser.money();      // uses the money() method of Miser interface
+		super.Greedy.money();    // uses the money() method of Greedy interface
+		super.Miser.money();    // uses the money() method of Miser interface
 	}
 }
 ```
@@ -157,13 +214,13 @@ Speakable s = new Speakable() {
 
 - Lambda expressions are similar to methods, but they do not need a name and they can be implemented right in the body of a method.
 
-    (parameter1, parameter2) -> expression
+		(parameter1, parameter2) -> expression
 
 - Expressions are limited. They have to immediately return a value, and they cannot contain variables, assignments or statements such as if or for.
 
 - In order to do more complex operations, a code block can be used with curly braces. If the lambda expression needs to return a value, **then the code block should have a return statement**.
 
-	  (parameter1, parameter2) -> { code block }
+		(parameter1, parameter2) -> { code block }
 
 ### Functional Interface
 
@@ -426,4 +483,13 @@ If a method does not handle exceptions, the type of exceptions that may occur wi
 
 
 ---
+
+
+## Java I/O and NIO
+
+
+
+
+---
+
 

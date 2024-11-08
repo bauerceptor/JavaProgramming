@@ -1,6 +1,6 @@
-package exercise_class04;
+package generics_and_enums_class10;
 
-public abstract class Employee {
+public class Employee {
 	String name;
 	String designation;
 	double salary;
@@ -16,5 +16,8 @@ public abstract class Employee {
 	}
 	
 	
-	public abstract void doWork();
+	public void doWork() {
+		System.out.println("wait");
+
+	}
 }

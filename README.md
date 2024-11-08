@@ -9,7 +9,7 @@
  7. [Class 07 - Collections & `stream` API](#collections)
  8. Class 08 - Revision of Streams API
  9. [Class 09 - Java I/O & NIO](#java-io-and-nio)
- 10. Class 10 - 
+ 10. [Class 10 - Java Generics & Enumerations](#java-generics-and-enums)
 
 
 ---
@@ -493,3 +493,31 @@ If a method does not handle exceptions, the type of exceptions that may occur wi
 ---
 
 
+## Java Generics and Enums
+
+- Provides compile-time data-type safety (removing the need for type-casting) and it also reduces code duplication while promoting code reuse.
+
+- Class, method, enumeration, constructor, everything can be made a generic in Java.
+
+- Generics never work on primitive types, we have to use objects with generics.
+
+-  At any unknown type, we can perform read operations but not write operations so we cannot add to a generic list anything except null (except the items added while instantiating the list from `Arrays.toList()` ). But we can read from this list
+
+-  Lower bounds (through `super`) and Upper bounds (through `extends`) can be defined by means of generics. Lower bounds are more generic and can allow writing data to lists as well as reading it.
+
+- Type erasure by compiler at runtime and real compiled Java code does not have generics anywhere in it.
+
+- Every numerical value (int, float, double, long) in Java inherits from the Number class.
+
+- ? is a wild card that is used in generics.
+
+
+### Enumerations
+
+- Predefined lists that provide both type-safety and reduce the amount of code.
+
+- Enumeration is treated as a data-type in Java.
+
+- Enumerations can also have methods: normal, abstract, final and static. But static methods are not used because the enum's data item(s) is/are actually an instance of that enum so we don't need to use static method for it. 
+
+- Enumerations can also have their own constructor which is **private** only because this constructor is used from inside that enumeration only. So we can also omit the constructor's access modifier and assume that it is private by default. Also, constructors will have **private attributes** as well.

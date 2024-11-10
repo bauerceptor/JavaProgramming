@@ -30,6 +30,10 @@ public class Person implements Comparable<Person> {		// implementing Comparable 
 		this.age = age;
 	}
 
+	public Person(String name2, String string) {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 //	public int compareTo(Object arg0) {
 //	Person p = (Person)obj;

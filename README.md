@@ -10,6 +10,7 @@
  8. Class 08 - Revision of Streams API
  9. [Class 09 - Java I/O & NIO](#java-io-and-nio)
  10. [Class 10 - Java Generics & Enumerations](#java-generics-and-enums)
+ 11. [Class 11 - Java's Built-In Functional Interfaces](#builtin-functional-interfaces-of-java)
 
 
 ---
@@ -166,7 +167,7 @@ In this way, we can use interfaces to juggle between different types and enforce
 
 - In Java, we can only inherit from a single class but we can implement more than one interfaces.
 
-- It is not necessary to write ```public abstract``` with an interface method because it is *by-default both public and abstract* (since it tends to be over-ridden later on).
+- It is not necessary to write ```public abstract``` with an interface method because it is *by-default both public and abstract* (since it tends to be over-ridden later on). Also, implementations of methods defined in the interface **must always have public** as their visibility attribute.
 
 - After Java 8, we can also provide a **default method** with ```default``` keyword. This method means that this abstract class has at least one functionality which we know well and can implement it then and there. The `default` method can also be Over-ridden later on. Similarly, interfaces can also have a `static` method which can also have a well-designed / already implemented body.
 
@@ -501,6 +502,8 @@ If a method does not handle exceptions, the type of exceptions that may occur wi
 
 - Generics never work on primitive types, we have to use objects with generics.
 
+- Compiler can *infer the type* of data used in a generic type whether that generic type is an instance (of a generic class) or a generic method. Similarly, compiler can infer types of generic collections while using the Streams API as well. Also, the compiler can infer the data-type of local variables (variables inside the methods) when such variables are declared using the `var` keyword. This `var` variable can even be a collection.
+
 -  At any unknown type, we can perform read operations but not write operations so we cannot add to a generic list anything except null (except the items added while instantiating the list from `Arrays.toList()` ). But we can read from this list
 
 -  Lower bounds (through `super`) and Upper bounds (through `extends`) can be defined by means of generics. Lower bounds are more generic and can allow writing data to lists as well as reading it.
@@ -521,3 +524,58 @@ If a method does not handle exceptions, the type of exceptions that may occur wi
 - Enumerations can also have methods: normal, abstract, final and static. But static methods are not used because the enum's data item(s) is/are actually an instance of that enum so we don't need to use static method for it. 
 
 - Enumerations can also have their own constructor which is **private** only because this constructor is used from inside that enumeration only. So we can also omit the constructor's access modifier and assume that it is private by default. Also, constructors will have **private attributes** as well.
+
+
+---
+
+
+## BuiltIn Functional Interfaces of Java
+
+- Java has some built-in functional interfaces which do not need to be used by first declaring a new separate interface. So, these interfaces can be directly used in the program without declaring a new interface file.
+
+- All these built-in interfaces take only one item as input (be it a single data item or a collection).
+
+### Predicate<T>
+
+- Takes one generic value as input, tests it, and then responds with either a true or false.
+
+- Predicates are used when we want to test something on a single item and want the result in either true or false.
+
+- Filter of Streams API takes in Predicate as an argument.
+
+### Function<T, R>
+
+- Where T is the input type and V is the output type.
+
+- So it can take one type as input, process it and then respond with a result as second type.
+
+### Consumer<T>
+
+- Takes one generic value as input and performs some operation/function on it but does not return anything back.
+
+- forEach of Streams API takes in a Consumer as an argument.
+
+### Supplier<T>
+
+- A method that does not take any input but returns some output. It is opposite of Consumer.
+
+### BinaryOperator<T>
+
+- In this interface, the input type and return type are both same. This interface takes **two values** of same data-type as input, processes them, and returns a single result of same data-type as the input type.
+
+- Reduce of Streams API takes in BinaryOperator as argument.
+
+
+### BiPredicate<T, V>
+
+- Equivalent to Predicate, however, BiPredicate takes in two values as input, evaluates them and returns a result in true or false.
+
+- Filter of Streams API can also take BiPredicate as an argument.
+
+
+### BiFunction<T, U, R>
+
+- Takes in two inputs, T and U, processes them and returns the result in the data-type of R.
+
+- Map of Stream API can take BiFunction as an argument.
+

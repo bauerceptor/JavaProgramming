@@ -1,4 +1,4 @@
-package class11;
+package functional_interfaces_class11;
 
 
 public class Person {		

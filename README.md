@@ -11,6 +11,8 @@
  9. [Class 09 - Java I/O & NIO](#java-io-and-nio)
  10. [Class 10 - Java Generics & Enumerations](#java-generics-and-enums)
  11. [Class 11 - Java's Built-In Functional Interfaces](#builtin-functional-interfaces-of-java)
+ 12. [Class 12 - Java Networking](#java-networking)
+ 13. [Class 13 - JDBC](#jdbc)
 
 
 ---
@@ -143,6 +145,7 @@ Here the method is chosen depending on the parameter passed even when the name a
 
 - `this` keyword is used to call the constructor of  a class within that class itself. It could even be called in another constructor of that same class.
 
+[Go back to table of contents.](#topics-covered)
 
 --- 
 
@@ -230,6 +233,8 @@ Speakable s = new Speakable() {
 - However, it can also have a `default` method in addition to the abstract `@FunctionalInterface` method.
 
 - An instance of interface is created in 3 ways: by implementing the interface in a class, by using anonymous classes, or through lambda expressions.
+
+[Go back to table of contents.](#topics-covered)
 
 
 ---
@@ -444,6 +449,8 @@ If a method does not handle exceptions, the type of exceptions that may occur wi
 
 - ***There are some errors in the files/classes in the `error_handling_class05` package.***
 
+[Go back to table of contents.](#topics-covered)
+
 
 ---
 
@@ -482,13 +489,13 @@ If a method does not handle exceptions, the type of exceptions that may occur wi
 
 - `reduce` is used when we wish to perform some aggregation on a list. `reduce`also saves and stores the result of previous iterations.
 
+[Go back to table of contents.](#topics-covered)
+
 
 ---
 
 
 ## Java I/O and NIO
-
-
 
 
 ---
@@ -524,6 +531,8 @@ If a method does not handle exceptions, the type of exceptions that may occur wi
 - Enumerations can also have methods: normal, abstract, final and static. But static methods are not used because the enum's data item(s) is/are actually an instance of that enum so we don't need to use static method for it. 
 
 - Enumerations can also have their own constructor which is **private** only because this constructor is used from inside that enumeration only. So we can also omit the constructor's access modifier and assume that it is private by default. Also, constructors will have **private attributes** as well.
+
+[Go back to table of contents.](#topics-covered)
 
 
 ---
@@ -578,4 +587,25 @@ If a method does not handle exceptions, the type of exceptions that may occur wi
 - Takes in two inputs, T and U, processes them and returns the result in the data-type of R.
 
 - Map of Stream API can take BiFunction as an argument.
+
+[Go back to table of contents.](#topics-covered)
+
+
+---
+
+
+## Java Networking
+
+[Go back to table of contents.](#topics-covered)
+
+
+---
+
+
+## JDBC
+
+[Go back to table of contents.](#topics-covered)
+
+---
+
 

@@ -147,6 +147,7 @@ Here the method is chosen depending on the parameter passed even when the name a
 
 [Go back to table of contents.](#topics-covered)
 
+
 --- 
 
 
@@ -327,8 +328,6 @@ finally {
 
 If an exception occurs, the `finally` block is executed after the `try...catch` block. Otherwise, it is executed after the try block. For each `try` block, there can be only one `finally` block.
 
----
-
 #### Example: Exception Handling using `finally` block
 
 ```java
@@ -497,6 +496,9 @@ If a method does not handle exceptions, the type of exceptions that may occur wi
 
 ## Java I/O and NIO
 
+[Go back to table of contents.](#topics-covered)
+
+
 
 ---
 
@@ -588,7 +590,7 @@ If a method does not handle exceptions, the type of exceptions that may occur wi
 
 - Map of Stream API can take BiFunction as an argument.
 
-[Go back to table of contents.](#topics-covered)
+[Go back to table of contents](#topics-covered)
 
 
 ---
@@ -605,6 +607,7 @@ If a method does not handle exceptions, the type of exceptions that may occur wi
 ## JDBC
 
 [Go back to table of contents.](#topics-covered)
+
 
 ---
 

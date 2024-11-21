@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import collections_class07.Person;
+import class07_collections.Person;
 
 public class TestClass {
 

@@ -1,24 +1,24 @@
 # Topics Covered
 
  1. Class 01 - Introduction to Java & Its Ecosystem
- 2. [Class 02 - Fundamentals of Object Oriented Programming](#oop-fundamentals)
+ 2. [Class 02 - Fundamentals of Object Oriented Programming](#2-oop-fundamentals)
  3. Class 03 - Revision
- 4. [Class 04 - Interfaces, Anonymous Classes & Lambda Expressions](#interfaces-and-lambda-expressions)
- 5. [Class 05 - Exception Handling & Throwing Exceptions](#exception-handling)
- 6. Class 06 - String Class & Object class' `toString` and `equls` Method Overriding
- 7. [Class 07 - Collections & `stream` API](#collections)
+ 4. [Class 04 - Interfaces, Anonymous Classes & Lambda Expressions](#4-interfaces-and-lambda-expressions)
+ 5. [Class 05 - Exception Handling & Throwing Exceptions](#5-exception-handling)
+ 6. Class 06 - String Class & Object class' `toString` and `equals` Method Overriding
+ 7. [Class 07 - Collections & `stream` API](#7-collections)
  8. Class 08 - Revision of Streams API
- 9. [Class 09 - Java I/O & NIO](#java-io-and-nio)
- 10. [Class 10 - Java Generics & Enumerations](#java-generics-and-enums)
- 11. [Class 11 - Java's Built-In Functional Interfaces](#builtin-functional-interfaces-of-java)
- 12. [Class 12 - Java Networking](#java-networking)
- 13. [Class 13 - JDBC](#jdbc)
+ 9. [Class 09 - Java I/O & NIO](#9-java-io-and-nio)
+ 10. [Class 10 - Java Generics & Enumerations](#10-java-generics-and-enums)
+ 11. [Class 11 - Java's Built-In Functional Interfaces](#11-builtin-functional-interfaces-of-java)
+ 12. [Class 12 - Java Networking](#12-java-networking)
+ 13. [Class 13 - JDBC](#13-jdbc)
 
 
 ---
 
 
-## OOP Fundamentals
+## 2 OOP Fundamentals
 
 Java has only 8 primitive types of data (byte, short, int, long, float, double, boolean, char). Everything else in Java, is an object. Strings, however, are a special type of object which are created in a **String Pool** in the memory instead of Heap/Stack like other objects.
 
@@ -151,7 +151,7 @@ Here the method is chosen depending on the parameter passed even when the name a
 --- 
 
 
-## Interfaces and Lambda Expressions
+## 4 Interfaces and Lambda Expressions
 
 ### Interfaces
 
@@ -241,7 +241,7 @@ Speakable s = new Speakable() {
 ---
 
 
-## Exception Handling
+## 5 Exception Handling
 
 - Main thread executes inside JVM (Java Virtual Machine).
 
@@ -454,7 +454,7 @@ If a method does not handle exceptions, the type of exceptions that may occur wi
 ---
 
 
-## Collections
+## 7 Collections
 
 - Arrays is a fixed time of collection whose size is known at compile time.
 
@@ -494,7 +494,7 @@ If a method does not handle exceptions, the type of exceptions that may occur wi
 ---
 
 
-## Java I/O and NIO
+## 9 Java I/O and NIO
 
 [Go back to table of contents.](#topics-covered)
 
@@ -503,7 +503,7 @@ If a method does not handle exceptions, the type of exceptions that may occur wi
 ---
 
 
-## Java Generics and Enums
+## 10 Java Generics and Enums
 
 - Provides compile-time data-type safety (removing the need for type-casting) and it also reduces code duplication while promoting code reuse.
 
@@ -540,55 +540,20 @@ If a method does not handle exceptions, the type of exceptions that may occur wi
 ---
 
 
-## BuiltIn Functional Interfaces of Java
+## 11 BuiltIn Functional Interfaces of Java
 
-- Java has some built-in functional interfaces which do not need to be used by first declaring a new separate interface. So, these interfaces can be directly used in the program without declaring a new interface file.
+- Java has some built-in functional interfaces that can be directly used in the program without declaring a new interface file.
 
-- All these built-in interfaces take only one item as input (be it a single data item or a collection).
-
-### Predicate<T>
-
-- Takes one generic value as input, tests it, and then responds with either a true or false.
-
-- Predicates are used when we want to test something on a single item and want the result in either true or false.
-
-- Filter of Streams API takes in Predicate as an argument.
-
-### Function<T, R>
-
-- Where T is the input type and V is the output type.
-
-- So it can take one type as input, process it and then respond with a result as second type.
-
-### Consumer<T>
-
-- Takes one generic value as input and performs some operation/function on it but does not return anything back.
-
-- forEach of Streams API takes in a Consumer as an argument.
-
-### Supplier<T>
-
-- A method that does not take any input but returns some output. It is opposite of Consumer.
-
-### BinaryOperator<T>
-
-- In this interface, the input type and return type are both same. This interface takes **two values** of same data-type as input, processes them, and returns a single result of same data-type as the input type.
-
-- Reduce of Streams API takes in BinaryOperator as argument.
-
-
-### BiPredicate<T, V>
-
-- Equivalent to Predicate, however, BiPredicate takes in two values as input, evaluates them and returns a result in true or false.
-
-- Filter of Streams API can also take BiPredicate as an argument.
-
-
-### BiFunction<T, U, R>
-
-- Takes in two inputs, T and U, processes them and returns the result in the data-type of R.
-
-- Map of Stream API can take BiFunction as an argument.
+|  Functional Interface | Input  |  Output  | Used By  |  Additional Info  |
+|---|---|---|---|---|
+| Predicate<T>  | T  | true / false  | `filter`  |  Predicates are used when we want to test something on a single item and want the result in either true or false. It takes one generic value as input, tests it, and then responds with either a true or false. |
+| Function<T, V>  | T  | V  | `map`  |  It can take one type (T) as input, process it and then respond with a result (V) as second type. |
+| Consumer<T>  | T  | -  | `forEach`  |  Takes one generic value (T) as input and performs some operation/function on it but does not return anything back. |
+| Supplier<T>  | -  | T  | `Stream.generate`  |  A method that does not take any input but returns some output (T). It is opposite of Consumer. |
+| BinaryOperator<T>  | T  | T  | `reduce`  |  In this interface, the input type and return type are both same (T). This interface takes **two values** of same data-type as input (T), processes them, and returns a single result (T) of same data-type as the input type. |
+| BiPredicate<T, V>  | T, V  | true / false  | `filter`  |  Equivalent to Predicate, however, BiPredicate takes in two values as input (T, V), evaluates them and returns a result in true or false. |
+| BiFunction<T, U, R>  | T, U  | R  | `map`  |  Takes in two inputs, T and U, processes them and returns the result in the data-type of R.|
+| BiConsumer<T, U>  | T, U  | -  | `forEach`  |  Performs an operation on two inputs of type T and U and returns nothing. It is used with List and Streams API, often in cases where you need to perform an operation on each element of the list while involving an additional parameter.|
 
 [Go back to table of contents](#topics-covered)
 
@@ -596,7 +561,7 @@ If a method does not handle exceptions, the type of exceptions that may occur wi
 ---
 
 
-## Java Networking
+## 12 Java Networking
 
 [Go back to table of contents.](#topics-covered)
 
@@ -604,7 +569,7 @@ If a method does not handle exceptions, the type of exceptions that may occur wi
 ---
 
 
-## JDBC
+## 13 JDBC
 
 [Go back to table of contents.](#topics-covered)
 

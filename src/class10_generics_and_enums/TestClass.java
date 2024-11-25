@@ -43,11 +43,11 @@ public class TestClass {
 //		genMethod2("some random string");	// error
 		
 		
-		List<Employee> emps1 = Arrays.asList( new Employee(), new Admin() );			// when we know this list will contain Employee type data
+		List<Employee> emps1 = Arrays.asList( new Employee(), new Admin() );	// when we know this list will contain Employee type data
 		printList(emps1);
 		
 		// here, ? is a wild card
-		List<?> emps2 = Arrays.asList( new Employee(), new Admin(), "abcd"  );	// when we don't know which type of data this list2 will contian
+		List<?> emps2 = Arrays.asList( new Employee(), new Admin(), "abcd"  );	// when we don't know the type of data this list will contain
 //		emps2.add( "abcd");		// error: type unknown. We cannot write to a generic list type because we don't know the actual type of data
 		
 		
@@ -55,7 +55,7 @@ public class TestClass {
 //		emps3.add( new Admin() );	// here we can add items to emps3 because we are more sure of its item types than before because we are using lower bound here
 		
 		List<? extends Employee> emps4 = Arrays.asList( new Employee() );	// upper bound
-//		emps4.add( new Admin() );	// error: type unknown because upper bound is less generalized
+//		emps4.add( new Admin() );	// error: type unknown because Admin is child class of Employee not its parent class
 		
 		
 //		List<? extends Employee & GenericInterface<String>> emps5 = new ArrayList();	// a list that contains objects/items that are both Employee type and implement GenericInterface
@@ -64,16 +64,17 @@ public class TestClass {
 		
 		
 		// ------------- enums --------------
+		System.out.println("------------- enums --------------");
 		Shirt s = new Shirt();
 		s.setColor(ShirtColor.WHITE);
 		
-		ShirtColor color = s.getColor();
-		System.out.println( color.name() );		// enum has a .name() method
-		String c = color.toLowerCase();			// method defined in enum
+		ShirtColor color = s.getColor();		// color object of type enum
+		System.out.println( color.name() );		// enum has a built-in .name() method
+		String c = color.toLowerCase();			// normal method defined in enum
 		System.out.println(c);
 		
 		System.out.println(color.getColorCode());	// abstract method defined and implemented in enum
-		System.out.println(color.getRate());
+		System.out.println(color.getRate());		// constructor/getter method defined in enum
 	
 	
 	}

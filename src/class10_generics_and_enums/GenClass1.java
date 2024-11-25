@@ -1,6 +1,6 @@
 package class10_generics_and_enums;
 
-public class GenClass1<T> {																			2 4 5 7 9 10 11 12 13
+public class GenClass1<T> {
 	private T t;
 
 	public GenClass1() {

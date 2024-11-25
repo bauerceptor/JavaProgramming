@@ -82,6 +82,15 @@ public class Streams {
 		int totalAge3 = persons.stream().mapToInt(Person::getAge).sum();
 		System.out.println(totalAge);
 		
+		// multiple comparisons and then collecting the result to a Map data structure
+//		Map<String, List<Employee>> sortedAndFilteredEmployees = employees.stream()
+//	            .filter(e -> e.getExperienceYears() > 5)	// filter employees with more than 5 years of experience
+//	            .sorted(Comparator.comparing(Employee::getDepartment)	// sort first by department alphabetically
+//	            				  			.thenComparing(Comparator.comparing(Employee::getSalary)	// second comparison
+//														  .reversed()))		// salary is sorted in descending order
+//	            .collect(Collectors.groupingBy(Employee::getDepartment));	// collect to map with department as the key
+
+		
 	}
 	
 	public static void someMethod(String[] arr) {

@@ -49,14 +49,15 @@ public enum ShirtColor {
 		}
 	};
 	
-	// constructor below
-	private int rate;
+
+	private int rate;		// constructor attribute
 	
+	// constructor below
 	private ShirtColor(int rate) {
 		this.rate = rate;
 	}
 	
-	// enums can also have methods
+	// normal method in enumeration
 	public String toLowerCase() {
 		return this.name().toLowerCase();
 	}
@@ -64,6 +65,7 @@ public enum ShirtColor {
 	// abstract method in enumeration
 	public abstract int getColorCode();
 	
+	// another normal method (getter) in enumeration, but this one returns the constructor attribute
 	public int getRate() {
 		return this.rate;
 	}

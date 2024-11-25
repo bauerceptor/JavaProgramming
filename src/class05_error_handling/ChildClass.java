@@ -14,16 +14,16 @@ public class ChildClass extends ParentClass {
 		this();
 //		super("message");
 //		System.out.println("abcdef");
-		this.i;
+//		this.i;
 	}
 	
 	@Override
-	public void myMethod() {			// it is not necessary in java to also override parent method's thrown exception
+	public void myMethod1() {			// it is not necessary in java to also override parent method's thrown exception
 		
 	}
 	
-	@Override
-	public void myMethod() throws Exception {	
-		
-	}
+//	@Override
+//	public void myMethod() throws Exception {	
+//		
+//	}
 }

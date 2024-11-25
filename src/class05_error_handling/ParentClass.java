@@ -15,6 +15,11 @@ public class ParentClass {
 	public void myMethod() throws MyException {
 		
 	}
+
+	public void myMethod1() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 }

@@ -1,6 +1,8 @@
 package class10_generics_and_enums;
 
 public class Shirt {
+	
+	// ShirtColor is an enumeration
 	private ShirtColor color;	// shirt can only have four colors: red, green, blue or white
 	
 	public Shirt() {
@@ -12,15 +14,9 @@ public class Shirt {
 	}
 
 	public void setColor(ShirtColor color) {
-		
-		
 //		if (color.equals("red"))
 		this.color = color;
 	}
 
-	public void setColor(class10_generics_and_enums.sample_generics.ShirtColor red) {
-		// TODO Auto-generated method stub
-		
-	}
 	
 }

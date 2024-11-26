@@ -1,6 +1,6 @@
 # Java Programming - Topics Covered
 
- 1. Class 01 - Introduction to Java & Its Ecosystem
+ 1. Class 01 - Java & Its Ecosystem
  2. [Class 02 - Fundamentals of Object Oriented Programming](./src/class02_oop/notes.md)
  3. Class 03 - Revision
  4. [Class 04 - Interfaces, Anonymous Classes & Lambda Expressions](./src/class04_lambda/notes.md)
@@ -13,3 +13,5 @@
  11. [Class 11 - Java's Built-In Functional Interfaces](./src/class11_functional_interfaces/notes.md)
  12. [Class 12 - Java Networking](./src/class12_networking/notes.md)
  13. [Class 13 - JDBC using MySQL](./src/class13_jdbc_mysql/notes.md)
+
+Some things in Java are always hard to remember. To see such *brain-teasers*, click [here](./brain-teasers.md).

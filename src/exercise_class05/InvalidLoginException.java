@@ -1,4 +1,4 @@
-package exercise_class05_part2;
+package exercise_class05;
 
 public class InvalidLoginException extends Exception {
 

@@ -13,5 +13,6 @@
  11. [Class 11 - Java's Built-In Functional Interfaces](./src/class11_functional_interfaces/notes.md)
  12. [Class 12 - Java Networking](./src/class12_networking/notes.md)
  13. [Class 13 - JDBC using MySQL](./src/class13_jdbc_mysql/notes.md)
+ 13. [Class 13 - JDBC using MongoDB](./src/class13_jdbc_mongo/notes.md)
 
 Some things in Java are always hard to remember. To see such *brain-teasers*, click [here](./brain-teasers.md).

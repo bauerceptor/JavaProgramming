@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import class07_collections.Person;
+import class07_collections_comparisons_streams.Person;
 
 public class TestClass {
 

@@ -1,5 +1,14 @@
 # 7 Collections, comparisons & `stream` API
 
+- [7 Collections, comparisons \& `stream` API](#7-collections-comparisons--stream-api)
+  - [Collections](#collections)
+  - [Implementing comparisons in Java](#implementing-comparisons-in-java)
+    - [Comparable Interface](#comparable-interface)
+    - [Comparator Interface](#comparator-interface)
+    - [Comparable \& Comparator - Side-by-side](#comparable--comparator---side-by-side)
+  - [Streams API](#streams-api)
+
+
 ## Collections
 
 - Arrays is a fixed time of collection whose size is known at compile time.

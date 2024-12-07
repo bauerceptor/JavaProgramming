@@ -1,4 +1,4 @@
-package class13_jdbc_mysql;
+package class14_jdbc_mysql;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -115,7 +115,7 @@ public class BatchProcessing
 	            
 	            // Process in batches of given batchSize
 	            IntStream.range(0, 20)
-	                .boxed()
+	                .boxed()			// performs grouping
 	                .collect(Collectors.groupingBy(i -> i / batchSize)) // Group into batches of given batchSize
 	                .values()
 	                .forEach(batch -> 
@@ -140,6 +140,7 @@ public class BatchProcessing
 	                    try 
 	                    {
 	                        pst.executeBatch(); // Execute current batch
+//	                        conn.commit(); 		// if i want to commit each batch when it completes
 	                    } 
 	                    catch (SQLException e) 
 	                    {
@@ -147,7 +148,7 @@ public class BatchProcessing
 	                    }
 	                });
 
-	            conn.commit(); // Commit the transaction
+	            conn.commit(); // Commit the transaction when all batches complete
 	            System.out.println("Batch executed successfully!!!");
 	        }
 	    } catch (SQLException ex) {

@@ -12,7 +12,10 @@
 - [Class 10 - Java Generics & Enumerations](./src/class10_generics_and_enums/notes.md)
 - [Class 11 - Java's Built-In Functional Interfaces](./src/class11_functional_interfaces/notes.md)
 - [Class 12 - Java Networking](./src/class12_networking/notes.md)
-- [Class 13a - JDBC using MySQL](./src/class13_jdbc_mysql/notes.md)
-- [Class 13b - JDBC using MongoDB](./src/class13_jdbc_mongo/notes.md)
+- [Class 13 - Optionals in Java](./src/class13_optionals/notes.md)
+- [Class 14 - JDBC using MySQL](./src/class14_jdbc_mysql/notes.md)
+- [Class 15 - JDBC using MongoDB](./src/class15_jdbc_mongo/notes.md)
 
-Some things in Java are always hard to remember. For details on such *brain-teasers*, click [here](./brain-teasers.md).
+It is recommended to use a _Maven_ or _Gradle_ project and include these code packages in that project because advance topics such as JDBC require dependency management and resolution which can be troublesome to handle without a reliable package manager.
+
+Some things in Java are always hard to remember. For details on such _brain-teasers_, click [here](./brain-teasers.md).

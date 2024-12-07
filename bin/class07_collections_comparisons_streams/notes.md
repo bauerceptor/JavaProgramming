@@ -1,5 +1,14 @@
 # 7 Collections, comparisons & `stream` API
 
+- [7 Collections, comparisons \& `stream` API](#7-collections-comparisons--stream-api)
+  - [Collections](#collections)
+  - [Implementing comparisons in Java](#implementing-comparisons-in-java)
+    - [Comparable Interface](#comparable-interface)
+    - [Comparator Interface](#comparator-interface)
+    - [Comparable \& Comparator - Side-by-side](#comparable--comparator---side-by-side)
+  - [Streams API](#streams-api)
+
+
 ## Collections
 
 - Arrays is a fixed time of collection whose size is known at compile time.
@@ -104,7 +113,7 @@ The figure above illustrates how a stream works. The starting point (1) is a lis
     System.out.println(combined);
   ```
 
-- `.collect(Collectors.groupingBy(ClassName::getAttribute))` collects to a Map data structure with Attribute as the Map's key.
+- `.collect(Collectors.groupingBy(ClassName::getAttribute))` collects to a Map data structure with Attribute as the Map's key but it's values are a **List** data structure.
 
 - `.collect(Collectors.toCollection(ArrayList::new))` collects to an ArrayList data structure whereas `.collect(Collectors.toList())` collects to a List data structure which is infact an interface.
 

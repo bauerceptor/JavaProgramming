@@ -6,5 +6,115 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/home/lenovo/eclipse-workspace/ACP/mysql-connector-j-9.1.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/lenovo/eclipse-workspace/ACP/MongoDbJdbcDriver/bson-5.2.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/lenovo/eclipse-workspace/ACP/MongoDbJdbcDriver/bson-record-codec-5.2.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/lenovo/eclipse-workspace/ACP/MongoDbJdbcDriver/collections-24.1.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/lenovo/eclipse-workspace/ACP/MongoDbJdbcDriver/error_prone_annotations-2.27.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/lenovo/eclipse-workspace/ACP/MongoDbJdbcDriver/gson-2.11.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/lenovo/eclipse-workspace/ACP/MongoDbJdbcDriver/icu4j-24.1.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/lenovo/eclipse-workspace/ACP/MongoDbJdbcDriver/jniutils-24.1.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/lenovo/eclipse-workspace/ACP/MongoDbJdbcDriver/js-language-24.1.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/lenovo/eclipse-workspace/ACP/MongoDbJdbcDriver/js-scriptengine-24.1.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/lenovo/eclipse-workspace/ACP/MongoDbJdbcDriver/mongodb-driver-core-5.2.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/lenovo/eclipse-workspace/ACP/MongoDbJdbcDriver/mongodb-driver-sync-5.2.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/lenovo/eclipse-workspace/ACP/MongoDbJdbcDriver/mongojdbc4.9.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/lenovo/eclipse-workspace/ACP/MongoDbJdbcDriver/nativebridge-24.1.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/lenovo/eclipse-workspace/ACP/MongoDbJdbcDriver/nativeimage-24.1.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/lenovo/eclipse-workspace/ACP/MongoDbJdbcDriver/polyglot-24.1.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/lenovo/eclipse-workspace/ACP/MongoDbJdbcDriver/regex-24.1.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/lenovo/eclipse-workspace/ACP/MongoDbJdbcDriver/truffle-api-24.1.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/lenovo/eclipse-workspace/ACP/MongoDbJdbcDriver/truffle-compiler-24.1.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/lenovo/eclipse-workspace/ACP/MongoDbJdbcDriver/truffle-enterprise-24.1.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/lenovo/eclipse-workspace/ACP/MongoDbJdbcDriver/truffle-runtime-24.1.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/lenovo/eclipse-workspace/ACP/MongoDbJdbcDriver/word-24.1.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

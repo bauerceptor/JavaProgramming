@@ -1,4 +1,4 @@
-package class13_jdbc_mysql;
+package class14_jdbc_mysql;
 
 public record EmployeeRecord(int id, String name, String email, String department, int age, double salary) 
 {
@@ -12,8 +12,8 @@ public record EmployeeRecord(int id, String name, String email, String departmen
 		return new EmployeeRecord(0, name, null, null, 0, salary);
 	}
 
-	public String name() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	public String name() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 }

@@ -1,4 +1,4 @@
-package class13_jdbc_mysql;
+package class14_jdbc_mysql;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,9 +12,12 @@ import java.util.Optional;
 public class DBUtils {
 	
 	private static final String jdbcURL = "jdbc:mysql://localhost:3306/test_db";
-    private static final String username = "root";
-    private static final String password = "";
+//    private static final String username = "root";
+//    private static final String password = "";
 
+    private static final String username = "flamingo";
+    private static final String password = "Riphah@00";
+    
 	public DBUtils() {
 		// TODO Auto-generated constructor stub
 	}
